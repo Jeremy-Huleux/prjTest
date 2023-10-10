@@ -88,4 +88,6 @@ public abstract class Media {
 	}
 */
 
+	protected abstract String getGenre();
+
 }

@@ -3,30 +3,49 @@ package prjTest;
 import java.util.Scanner;
 
 public class Bibliobus {
-	public Livre[] tablo;
-	public String name;
+	public Media[] tablo;
+
+	 
+	public String name;	/*
 	private String titre;
 	private String auteur;
 	private String editeur;
 	private Genre genre;
-	private int nbExemplaires;
+	private int nbExemplaires;*/
 	private int nbCatalogue;
+	
 	private int placeDispo ;
-	public Livre NULL;
+	
+	public Media NULL;
 	int compteur = 0;
 	int compteurDex =0;
 	
-	public void creaBibli(String name){
+	public Bibliobus(String name){
+		this.name = name;
+		this.tablo = new Media[200] ;
+		this.nbCatalogue = 200;
+		this.placeDispo = 200;
 		
-		int taille = 200;
+		/*
+		 		int taille = 200;
 		Bibliobus nbCat = new Bibliobus();
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Entrer la taille du catalogue : ");
 		taille = sc.nextInt();
 		nbCatalogue = taille;
 		placeDispo = taille;
-		this.tablo = new Livre[nbCatalogue];
+		this.tablo = new Media[nbCatalogue];
 		this.name = name;
+		 */
+
+	}
+	public Bibliobus(String name, int taille){
+		this.name = name;
+		this.tablo = new Media[taille] ;
+		this.nbCatalogue = taille;
+		this.placeDispo = taille;
+		
+
 	}
 	public int getNbCatalogue() {
 		return nbCatalogue;
@@ -34,12 +53,7 @@ public class Bibliobus {
 	public void setNbCatalogue(int nbCatalogue) {
 		this.nbCatalogue = nbCatalogue;
 	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
+	
 	public void ajoutLivre(String titre, String auteur, String editeur) {	//, Genre genre, int nb
 	/*	genre = Genre.Non;
 		nb = 1;*/
@@ -66,7 +80,7 @@ public class Bibliobus {
 			}
 			if(verif == false) {
 				nbCatalogue --;
-				Livre ajout = new Livre(titre ,auteur ,editeur , Genre.Non, 1, this.getName());
+				Media ajout = new Livre(titre ,auteur ,editeur , Genre.Ban, 1);
 				this.tablo[compteur] = ajout;
 				compteur++;
 			}
@@ -86,34 +100,14 @@ public class Bibliobus {
 		}
 	}
 	public void afficherCatalogue() {
-		name = this.getName();
-		System.out.println("Nom du catalogue : "+name);
+		System.out.println("Nom du catalogue : "+this.name);
 		for(int k = 0; k<=compteur-1; k++) {
 			System.out.println("\nIdentifiant : "+k);
 			System.out.println("\nCaracteristique : ");
 			System.out.println(this.tablo[k]);
 		}
 	}
-	public String getTitre(int id) {
-		titre = this.tablo[id].getTitre();
-		return titre;
-	}
-	public String getAuteur(int id) {
-		auteur = this.tablo[id].getAuteur();
-		return auteur;
-	}
-	public String getEditeur(int id) {
-		editeur = this.tablo[id].getEditeur();
-		return editeur;
-	}
-	public Genre getGenre(int id) {
-		genre = this.tablo[id].getGenre();
-		return genre;
-	}
-	public int getNbExemplaires(int id) {
-		nbExemplaires = this.tablo[id].getNbExemplaire();
-		return nbExemplaires;
-	}
+
 	public void afficheLivre(int id) {
 		System.out.println("Pour identifiant : "+ id);
 		System.out.println("\nTitre : "+this.tablo[id].getTitre());
@@ -138,7 +132,7 @@ public class Bibliobus {
 	public int genreDonne(Genre g) {
 		int nb2 = 0;
 		for(int y = 0; y<this.tablo.length-1; y++) {
-			if(this.tablo[y].getGenre() == g) {
+			if(this.tablo[y].getGenre().equals(g)) {
 				nb2++;
 			}
 		}
