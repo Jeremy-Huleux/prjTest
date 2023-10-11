@@ -18,11 +18,13 @@ public abstract class Habitation {
 		this.adresse = adresse;
 		this.surface = surface;
 	}
+	
+	
 	public void afficher() {
 		System.out.println(proprietaire);
 		System.out.println(adresse);
 		System.out.println(surface);
 	}
-	
+
 
 }
