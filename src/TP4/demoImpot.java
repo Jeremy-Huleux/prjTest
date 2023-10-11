@@ -6,8 +6,7 @@ public class demoImpot {
 		// TODO Auto-generated method stub
 		//Habitation h = new HabitationIndividuelle("Proprio test", "adresse test", 1000, 5, false);
 		Habitation h2 = new HabitationProfessionnelle("ProprioPro", "adressePro", 10000, 500);
-
-		h2.afficherPro();
+		h2.afficher();
 	}
  
 }

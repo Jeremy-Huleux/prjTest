@@ -5,7 +5,8 @@ public abstract class Habitation {
 	String proprietaire;
 	String adresse;
 	double surface;
-	
+
+
 	public double impot() {
 		double impot;
 		impot = this.surface*2;
@@ -24,7 +25,8 @@ public abstract class Habitation {
 		System.out.println(proprietaire);
 		System.out.println(adresse);
 		System.out.println(surface);
+		
 	}
-
+	
 
 }
