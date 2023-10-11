@@ -3,6 +3,7 @@ package TP4;
 public class HabitationProfessionnelle extends Habitation{
 	int employes;
 	double impoPro;
+	
 	public HabitationProfessionnelle(String proprietaire, String adresse, double surface, int employes) {
 		super(proprietaire, adresse, surface);
 		this.employes = employes;
@@ -21,4 +22,5 @@ public class HabitationProfessionnelle extends Habitation{
 		super.afficher();
 		System.out.println(employes);
 	}
+
 }

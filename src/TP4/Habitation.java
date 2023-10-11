@@ -1,7 +1,7 @@
 package TP4;
 
 public abstract class Habitation {
-
+	
 	String proprietaire;
 	String adresse;
 	double surface;
@@ -13,13 +13,11 @@ public abstract class Habitation {
 		return impot;
 	}
 	
-	public Habitation(String proprietaire, String adresse, double surface) {
-		
+	public Habitation(String proprietaire, String adresse, double surface) {		
 		this.proprietaire = proprietaire;
 		this.adresse = adresse;
 		this.surface = surface;
 	}
-	
 	
 	public void afficher() {
 		System.out.println(proprietaire);

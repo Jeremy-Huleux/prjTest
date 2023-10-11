@@ -9,7 +9,7 @@ public class HabitationIndividuelle extends Habitation {
 		super(proprietaire, adresse, surface);
 		this.nbPieces = nbPieces;
 		this.piscine = piscine;	
-		super.afficher();
+		//super.afficher();
 	}
 	
 	public void impotIndiv() {
@@ -17,6 +17,10 @@ public class HabitationIndividuelle extends Habitation {
 		if(piscine == true)impotIndiv = 500;
 	}
 
-	
+	public void afficher() {
+		super.afficher();
+		System.out.println(nbPieces);
+		System.out.println(piscine);
+	}
 
 }
