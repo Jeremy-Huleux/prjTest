@@ -1,31 +1,58 @@
 package TP5;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Fleur {
-	public double prix;
+	public float prix;
 	public int quantitee;
 	public String nom;
-	List<Fleur> Stock = new ArrayList<Fleur>();
-	
-	public Fleur(double prix, int quantitee, String nom) {
+
+	public Fleur(float prix, int quantitee, String nom) {
 		//super();
 		this.prix = prix;
 		this.quantitee = quantitee;
 		this.nom = nom;
-	}
-	
-	
-	public void ajoutStock(Fleur fleur) {
-		Stock.add(fleur);
-	}
-	
-	
-	public void quantiteStock(String nom) {
 		
 	}
+	
+	
+	public double getPrix() {
+		return prix;
+	}
+
+
+	public void setPrix(float prix) {
+		this.prix = prix;
+	}
+
+
+	public int getQuantitee() {
+		return quantitee;
+	}
+
+
+	public void setQuantitee(int quantitee) {
+		this.quantitee = quantitee;
+	}
+
+
+	public String getNom() {
+		return nom;
+	}
+
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+	public void ajoutQ(int q) {
+		this.quantitee = quantitee+q;
+	}
+
+
+	
 	
 
 
 }
+
