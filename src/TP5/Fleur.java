@@ -45,9 +45,9 @@ public class Fleur {
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
-	public void ajoutQ(int q) {
+/*	public void ajoutQ(int q) {
 		this.quantitee = quantitee+q;
-	}
+	}*/
 
 
 	

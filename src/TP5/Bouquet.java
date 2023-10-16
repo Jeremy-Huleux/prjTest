@@ -6,8 +6,9 @@ import java.util.*;
 public class Bouquet {
 	String nom;
 	String prenom;
+	float prixB;
 	List<Fleur> bouquet = new ArrayList<Fleur>();
-	ListIterator<Fleur> it = bouquet.listIterator();
+
 
 	public Bouquet(String nom, String prenom) {
 		this.nom = nom;
@@ -26,7 +27,11 @@ public class Bouquet {
 		}
 		return strinje;
 	}
-	
+	public void facturation() {
+		for(int u = 0; u<bouquet.size(); u++) {
+			prixB = prixB + this.bouquet.get(u).prix;
+		}
+	}
 
 
 }

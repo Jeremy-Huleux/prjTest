@@ -23,7 +23,8 @@ public class InterfaceFleuriste {
 		System.out.println(stock1.prixDuneFleur("rose"));
 		stock1.ajoutFleur("rose", 25);
 		System.out.println(stock1.quantiteStock("rose"));
-		
+		b1.facturation();
+		System.out.println(b1.prixB);
 		
 	}
 

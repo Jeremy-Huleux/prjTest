@@ -6,7 +6,6 @@ import java.util.ListIterator;
 
 public class Stock {
 	List<Fleur> stock = new ArrayList<Fleur>();
-	ListIterator<Fleur> it = stock.listIterator();
 
 	public int quantiteStock(String nom) {
 		for(int i = 0; i<stock.size(); i++) {
@@ -29,8 +28,8 @@ public class Stock {
 	}
 	public void ajoutFleur(String nom, int nb) {
 		for(int y = 0; y<stock.size(); y++) {
-			//System.out.println("1");
-			if(this.stock.get(y).nom == nom) { this.stock.get(y).ajoutQ(nb);}
+			if(this.stock.get(y).nom == nom) {this.stock.get(y).quantitee =+ this.stock.get(y).quantitee + nb ;}
 		}
 	}
+	
 }
