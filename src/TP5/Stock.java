@@ -1,10 +1,16 @@
 package TP5;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Stock {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	//Fleur fleur;
+	List<Fleur> Stock = new ArrayList<Fleur>();
+	
+	public void ajoutStock(Fleur fleur) {
+		Stock.add(fleur);
+			
+		//this.fleur = fleur;
 	}
-
+	
 }
