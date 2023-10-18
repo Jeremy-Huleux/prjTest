@@ -4,7 +4,7 @@ public class Table {
 	String[] tPerso = {"Valet","Dame","Roi","As"};
 	Carte carte1;
 	Carte carte2;
-	String gagneur;
+	String gagneur = "EGALITADE";
 
 	public Table(Carte carte1, Carte carte2) {
 		this.carte1 = carte1;
@@ -94,13 +94,13 @@ public class Table {
 	public String toString() {
 		String strinje;
 		strinje ="Sur la table :";
-		strinje = strinje + "\nCarte joueur 1 :";
-		if(this.carte1.num > 1) {strinje = strinje + "\n"+this.carte1.num+" de "+this.carte1.forme;}else {
-			strinje = strinje + "\n"+this.carte1.perso+" de "+this.carte1.forme;
+		strinje = strinje + "\n	Carte joueur 1 : " + this.carte1.j.nom;
+		if(this.carte1.num > 1) {strinje = strinje + "\n		"+this.carte1.num+" de "+this.carte1.forme;}else {
+			strinje = strinje + "\n		"+this.carte1.perso+" de "+this.carte1.forme;
 		}
-		strinje = strinje + "\nCarte joueur 2 :";
-		if(this.carte2.num > 1) {strinje = strinje + "\n"+this.carte2.num+" de "+this.carte2.forme;}else {
-			strinje = strinje + "\n"+this.carte2.perso+" de "+this.carte2.forme;
+		strinje = strinje + "\n	Carte joueur 2 : " + this.carte2.j.nom;
+		if(this.carte2.num > 1) {strinje = strinje + "\n		"+this.carte2.num+" de "+this.carte2.forme;}else {
+			strinje = strinje + "\n		"+this.carte2.perso+" de "+this.carte2.forme;
 		}
 		strinje = strinje + "\nGAGNEUR : "+this.gagneur;
 		return strinje;

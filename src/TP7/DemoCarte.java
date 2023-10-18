@@ -9,6 +9,7 @@ public class DemoCarte {
 		Carte carte1 = new Carte(3, "pique", j1);
 		Carte carte2 = new Carte("Coeur", "Roi", j2);
 		Table t1 = new Table(carte1, carte2);
+		t1.forceCarte();
 		System.out.println(t1);
 
 	}
