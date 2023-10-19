@@ -13,7 +13,15 @@ public class DemoCarte {
 		System.out.println(t1);
 		Paquet p1 = new Paquet("test");
 		p1.melangeT();
-		System.out.println(p1);
+		//p1.affiche();
+		//System.out.println(p1);
+		//Test dh = new Test();
+
+		//dh.remplir();
+
+		//dh.affiche();
+
+		//dh.melangeT();
 	}
 
 }
